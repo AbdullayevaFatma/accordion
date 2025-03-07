@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Accordion from "./components/Accordion";
+import "./index.css";
 
-function App() {
+const faqs = [
+  {
+    title: "What is JSX?",
+    text: "JSX is a syntax extension of JavaScript. It is used with React to describe the user interface's appearance. Using JSX, we can write HTML structures in the same file that contains JavaScript code.",
+  },
+  {
+    title: "What are React Hooks?",
+    text: "React Hooks allow you to use state and lifecycle features in functional components. Hooks like useState, useEffect, and useContext make it easier to manage component logic without using classes, improving readability and reusability.",
+  },
+  {
+    title: "What is useState, and how does it work?",
+    text: "useState is a hook that allows you to add state to functional components. It takes an initial state value and returns an array with two elements: the current state and a function to update it.",
+  },
+];
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Accordion data={faqs} />
     </div>
   );
 }
-
-export default App;
