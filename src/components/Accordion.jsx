@@ -5,12 +5,12 @@ const Accordion = ({ data }) => {
   const [curOpen, setCurOpen] = useState(null)
   return (
     <div className="accordion">
-      {data.map((item, index) => (
+      {data.map((item) => (
         <AccordionItem
-          key={index}
+          key={item.id}
           text={item.text}
           title={item.title}
-          num={index}
+          num={item.id}
           curOpen={curOpen}
           setCurOpen={setCurOpen}
         />
